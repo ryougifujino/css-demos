@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .wrapper {
+            display: flex;
+        }
+
+        .wrapper > div {
+            flex: 1;
+            /* This will cause all of the items to grow and fill the container, rather than leaving
+            space at the end . */
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three</div>
+    <nav>I am nav.</nav>
+    <!--
+    if you add another element to the markup the items will all become smaller to make space for it
+    — they will adjust size to take up the same amount of space, whatever that is.
+     -->
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .wrapper {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three</div>
+    <!--
+    This is due to them(box*) becoming flex items and using some initial values that `flexbox` gives them.
+    They are displayed as a row, because the initial value of `flex-direction` is `row`.
+    They all appear to stretch to the height of the tallest item, because the initial value of the
+    `align-items` property is `stretch`.
+    -->
+</div>
+</body>
+</html>
