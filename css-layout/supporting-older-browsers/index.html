@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feature queries</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            background-color: rgb(79, 185, 227);
+            padding: 10px;
+            max-width: 400px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item {
+            float: left;
+            border-radius: 5px;
+            background-color: rgb(207, 232, 220);
+            padding: 1em;
+            width: 33.333%;
+        }
+
+        /* The browsers that do not support CSS Grid, which also doesn’t support feature queries. */
+        @supports (display: grid) {
+            .item {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="item">Item One</div>
+    <div class="item">Item Two</div>
+    <div class="item">Item Three</div>
+</div>
+</body>
+</html>
