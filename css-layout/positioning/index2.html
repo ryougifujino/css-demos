@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning contexts</title>
+    <style>
+        header {
+            background-color: aqua;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+            border: black 1px solid;
+        }
+
+        .wrapper {
+        }
+
+        .wrapper > div {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            /*
+            只有存在top等偏移设置存在才可以脱离文档流，否则即使设置了absolute也还是在原文档流里。
+            */
+        }
+    </style>
+</head>
+<body>
+<!--
+The initial containing block has the dimensions of the viewport, and is also the block that contains
+the `<html>` element. Simply put, the absolutely positioned element will be contained outside of the
+`<html>` element, and be positioned relative to the initial viewport.
+-->
+<header></header>
+<div class="wrapper">
+    I am a wrapper.
+    <div>
+        The initial containing block has the dimensions of the viewport...
+    </div>
+</div>
+
+</body>
+</html>
