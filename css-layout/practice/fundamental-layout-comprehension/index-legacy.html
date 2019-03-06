@@ -4,6 +4,71 @@
     <meta charset="UTF-8">
     <title>Layout Task</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <style>
+        nav li {
+            display: inline-block;
+
+            /* reset font and padding because of `font-size: 0` in nav. */
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        /*
+         `text-align: justify` will not function in single line, so we need add the second line
+         manually.
+         */
+        nav ul::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden; /* for IE */
+        }
+
+        nav {
+            text-align: justify;
+            position: sticky;
+            top: 0; /* sticky required */
+
+            /* for removing blank resulted from `nav ul::after` */
+            font-size: 0;
+        }
+
+        main article img:nth-of-type(1) {
+            float: left;
+            margin-right: 25px;
+        }
+
+        article {
+            float: left;
+            width: 69%;
+        }
+
+        aside {
+            float: right;
+            width: 29%;
+        }
+
+        /*
+        .photos {
+            column-count: 2;
+            column-gap: 1px;
+        }
+
+        .photos img {
+            padding-bottom: 1px;
+        }
+        // flaw: images are disordered
+        */
+
+        .photos img {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            padding: 0 1px 1px 0;
+        }
+
+    </style>
 </head>
 
 <body>
