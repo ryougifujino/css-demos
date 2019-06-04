@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: black;
+
+            animation-name: fade-out, background-color, move;
+            animation-duration: 1s, 0.5s, 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* 属性完全匹配，那么将一一对应；
+               属性只有一个，将会对应到全部；
+               属性不是一个，也没有完全匹配，这个属性将按顺序重复补全后一一对应。 */
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 100%;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes background-color {
+            from {
+                background: lightblue;
+            }
+
+            to {
+                background: lightgreen;
+            }
+        }
+
+        @keyframes move {
+            to {
+                transform: translateX(200px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
